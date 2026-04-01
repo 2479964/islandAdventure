@@ -30,27 +30,42 @@ This document adds lightweight, browser-friendly minigames at natural tension/de
 <div id="timer"></div>
 <script>
 const contacts = ['deal','ally','press','law'];           // base cards (duplicated below for pairs)
-const deck = [...contacts, ...contacts].sort(() => Math.random()-0.5);
-let flipped = [], solved = 0, time = 45, tick;
+const deck = shuffle([...contacts, ...contacts]);
+let flipped = [], solved = 0, time = 45, timerInterval = null, lock = false, finished = false;
+function shuffle(arr){
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
 const grid = document.getElementById('memory-grid');
 deck.forEach((c,i) => {
   const card = document.createElement('button');
   card.textContent = '?'; card.dataset.value = c;
   card.onclick = () => {
-    if (flipped.length === 2 || card.disabled) return;
+    if (lock || flipped.length === 2 || card.disabled || finished) return;
     card.textContent = c; card.disabled = true; flipped.push(card);
     if (flipped.length === 2) {
       const [a,b] = flipped;
       if (a.dataset.value === b.dataset.value) { solved += 2; flipped=[]; }
-      else setTimeout(() => { a.textContent='?'; b.textContent='?'; a.disabled=b.disabled=false; flipped=[]; }, 600);
+      else {
+        lock = true;
+        setTimeout(() => { a.textContent='?'; b.textContent='?'; a.disabled=b.disabled=false; flipped=[]; lock = false; }, 600);
+      }
       if (solved === deck.length) end(true);
     }
   };
   grid.appendChild(card);
 });
 const timer = document.getElementById('timer');
-tick = setInterval(()=>{ time--; timer.textContent=`Time: ${time}s`; if(time<=0) end(false); },1000);
-function end(win){ clearInterval(tick); alert(win?'Win!':'Lose.'); }
+timerInterval = setInterval(()=>{ time--; timer.textContent=`Time: ${time}s`; if(time<=0) end(false); },1000);
+function end(win){
+  if (finished) return;
+  finished = true;
+  if (timerInterval) clearInterval(timerInterval);
+  alert(win?'Win!':'Lose.');
+}
 </script>
 ```
 
@@ -116,13 +131,22 @@ const feedback=document.getElementById('feedback');
   const btn=document.createElement('button');
   btn.textContent=color; btn.onclick=()=>select(color); feathers.appendChild(btn);
 });
-let attempt=[], attemptsLeft=3;
+let attempt=[];
+let attemptsLeft=3;
 function select(c){ if(attempt.length<4){ attempt.push(c); } }
 document.getElementById('submit').onclick=()=>{
-  if(attempt.join(',')===answer.join(',')) end(true);
-  else { attemptsLeft--; attempt=[]; feedback.textContent=`Nope. ${attemptsLeft} tries left.`; if(!attemptsLeft) end(false); }
+  const guess = attempt.join(',');
+  const target = answer.join(',');
+  if(guess===target){ end(true); return; }
+  attemptsLeft--;
+  attempt=[];
+  feedback.textContent=`Nope. ${attemptsLeft} tries left.`;
+  if(!attemptsLeft) end(false);
 };
-function end(win){ feedback.textContent=win?'Code cracked!':'Parrot wins.'; }
+function end(win){
+  feedback.textContent=win?'Code cracked!':'Parrot wins.';
+  attempt=[];
+}
 </script>
 ```
 
@@ -147,12 +171,19 @@ function end(win){ feedback.textContent=win?'Code cracked!':'Parrot wins.'; }
 <div id="dialogue"></div>
 <script>
 const dialogue=document.getElementById('dialogue');
-const prompts=[ // example structure; add two more prompts to make three turns total
+const prompts=[
  {q:'Pick a toast line', opts:[
    {t:'To mutual profit!', v:1},
    {t:'To mystery flights!', v:0},
    {t:'To plausible deniability!', v:-1}]},
- // add two more prompts similarly
+ {q:'Choose a table topic', opts:[
+   {t:'Mutual security cooperation', v:1},
+   {t:'Unscheduled island tour', v:-1},
+   {t:'Neutral weather small-talk', v:0}]},
+ {q:'Seal the deal', opts:[
+   {t:'Handshake and hummus', v:1},
+   {t:'Whispered side deal', v:-1},
+   {t:'Group selfie', v:0}]}
 ];
 let score=0, i=0;
 function render(){
