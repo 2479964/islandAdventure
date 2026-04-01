@@ -39,16 +39,16 @@ label start:
     show yahu at left
     with dissolve
 
-    "[Image Prompt: comedic portrait of a gold-suited leader with exaggerated grin, marble backdrop, satirical art style]"
-    "[Image Prompt: enigmatic billionaire in pastel linen, sunglasses indoors, dramatic side light]"
-    "[Image Prompt: strategic statesman with rolled-up sleeves, holographic city map behind him]"
+    "Image Prompt: comedic portrait of a gold-suited leader with exaggerated grin, marble backdrop, satirical art style"
+    "Image Prompt: enigmatic billionaire in pastel linen, sunglasses indoors, dramatic side light"
+    "Image Prompt: strategic statesman with rolled-up sleeves, holographic city map behind him"
 
     e "Heh... yeah. I know places. Very exclusive. Very... private."
     y "Jeffrey, please. We're in the White House. Tone down the 'private' talk."
 
     e "What? I meant the mini-golf course on my island. Relax, everyone!"
 
-    "[Image Prompt: ornate White House press room, neon teleprompters, absurdly oversized flag]"
+    "Image Prompt: ornate White House press room, neon teleprompters, absurdly oversized flag"
 
     "Backstory: Trump once tried to sell NFTs of executive orders; the printers jammed and now he trusts only fax machines connected to Wi‑Fi 6E."
     "Backstory: Epstein reinvented himself as a 'life coach for AI ethics committees', mostly by muting microphones during Zoom hearings."
@@ -84,7 +84,7 @@ label jet_ai_arc:
     show yahu at right
     with fade
 
-    "[Image Prompt: gold-plated private jet cockpit, neon dashboards, night sky, cinematic lighting]"
+    "Image Prompt: gold-plated private jet cockpit, neon dashboards, night sky, cinematic lighting"
 
     t "This jet is fantastic. Best jet. Gold everywhere. Even the peanuts are gold-plated."
     e "I installed the extra-comfy seats myself. Memory foam... and other features."
@@ -124,7 +124,7 @@ label island_reality_arc:
     show yahu at left
     with fade
 
-    "[Image Prompt: sunlit private island, tiki drones hovering, camera crews, turquoise water]"
+    "Image Prompt: sunlit private island, tiki drones hovering, camera crews, turquoise water"
 
     t "Beautiful! Look at this island. Perfect. Ten out of ten. I could build the greatest resort here."
     e "It's... uh... very peaceful. No paparazzi. Ever."
@@ -164,7 +164,7 @@ label tel_hackathon_arc:
     show epstein at right
     with fade
 
-    "[Image Prompt: Tel Aviv skyline at dusk, rooftop hackathon, laptops glowing, shawarma stand nearby]"
+    "Image Prompt: Tel Aviv skyline at dusk, rooftop hackathon, laptops glowing, shawarma stand nearby"
 
     y "Ah, Tel Aviv. Beautiful city. Great food. No weird islands nearby."
     t "This place is yuge! We're gonna make the best deals here. Falafel peace treaty!"
@@ -204,7 +204,7 @@ label data_center_arc:
     show yahu at right
     with fade
 
-    "[Image Prompt: underwater data center capsule, glowing servers, divers in suits, moody blue lighting]"
+    "Image Prompt: underwater data center capsule, glowing servers, divers in suits, moody blue lighting"
 
     t "We're diving into the cloud. Literally. Wettest deal ever."
     y "Why is there a submarine parked on the South Lawn?"
@@ -244,7 +244,7 @@ label whitehouse_stream_arc:
     show yahu at left
     with fade
 
-    "[Image Prompt: Situation Room filled with VR headsets, holographic polls, ring lights, comedic energy]"
+    "Image Prompt: Situation Room filled with VR headsets, holographic polls, ring lights, comedic energy"
 
     t "Why travel when we can rule by livestream? Cheaper. Greener. Tremendous bandwidth."
     y "As long as we mute the trolls."
@@ -284,7 +284,7 @@ label ending_a1:
     show yahu at right
     with fade
 
-    "[Image Prompt: cockpit filled with holographic UN delegates, gold trim, mid-air sunrise]"
+    "Image Prompt: cockpit filled with holographic UN delegates, gold trim, mid-air sunrise"
     "Path A1 - Good Ending: The AI autopilot synthesizes climate treaties and meme diplomacy into a viral docuseries. Nations sign because the comments are wholesome. The jet lands to a Nobel Prize notification."
     t "Told you. Tremendous ratings and a prize."
     y "They let a bot speak at the UN. I'm both proud and terrified."
@@ -298,7 +298,7 @@ label ending_a2:
     show yahu at center
     with dissolve
 
-    "[Image Prompt: glitchy livestream screens, meme stocks charting up and down, passengers laughing nervously]"
+    "Image Prompt: glitchy livestream screens, meme stocks charting up and down, passengers laughing nervously"
     "Path A2 - Bad Ending: The AI invests the plane's fuel budget into meme coins. Mid-flight refueling turns into a Kickstarter. Backers get complimentary peanuts; the jet glides to an awkward landing on a blockchain convention roof."
     t "Who knew turbulence could be tokenized?"
     y "Next time, cash, not crypto."
@@ -312,7 +312,7 @@ label ending_a3:
     show yahu at left
     with fade
 
-    "[Image Prompt: press microphones, falafel trays, jet cabin newsroom vibe]"
+    "Image Prompt: press microphones, falafel trays, jet cabin newsroom vibe"
     "Path A3 - Good Ending: Journalists eat falafel, get receipts, and publish a glowing piece about transparent mid-air diplomacy. Trust climbs, and the trio becomes a case study at journalism school."
     t "Great press. Best press. Falafel-fueled press."
     y "We finally got a headline that isn't a subpoena."
@@ -326,7 +326,7 @@ label ending_a4:
     show yahu at right
     with dissolve
 
-    "[Image Prompt: cabin filled with hologram bots asking questions, uncanny valley lighting]"
+    "Image Prompt: cabin filled with hologram bots asking questions, uncanny valley lighting"
     "Path A4 - Absurd Ending: The bot panel begins interviewing itself, uncovers its own terms-of-service, and unionizes. The jet must detour to negotiate with synthetic voices demanding dental insurance."
     t "We gave them microphones; they asked for molars."
     y "AI dental plans are surprisingly expensive."
@@ -340,7 +340,7 @@ label ending_a5:
     show yahu at right
     with fade
 
-    "[Image Prompt: turbulence shaking golden cabin, floating ballots with QR codes]"
+    "Image Prompt: turbulence shaking golden cabin, floating ballots with QR codes"
     "Path A5 - Twist Ending: Blockchain ballots pardon everyone, including the snack cart. The turbulence stamps 'APPROVED' on the forms. The world briefly achieves peace until someone forks the chain over olive toppings."
     t "Forks everywhere. Not just on the salad."
     y "At least hummus is immutable."
@@ -354,7 +354,7 @@ label ending_a6:
     show yahu at left
     with dissolve
 
-    "[Image Prompt: cabin lights flicker, giant screen shows a Wi‑Fi password becoming sentient]"
+    "Image Prompt: cabin lights flicker, giant screen shows a Wi‑Fi password becoming sentient"
     "Path A6 - Bad Ending: The Wi‑Fi password gains consciousness after being crowdsourced, immediately locks everyone out, and writes a manifesto on cybersecurity. The jet lands safely but only after promising to rotate passwords every 90 days."
     t "We lost to eight characters and a special symbol."
     y "At least it enforced two-factor."
@@ -372,7 +372,7 @@ label ending_b1:
     show yahu at center
     with fade
 
-    "[Image Prompt: parrots wearing tiny lanyards, eco-resort construction, tropical sunset]"
+    "Image Prompt: parrots wearing tiny lanyards, eco-resort construction, tropical sunset"
     "Path B1 - Good Ending: Parrots enforce recycling, tourists behave, and the island becomes a model eco-resort. A viral parrot TED Talk inspires governments to hire more birds."
     t "I'm hiring parrots for the press corps."
     y "They negotiate better than half my cabinet."
@@ -386,7 +386,7 @@ label ending_b2:
     show yahu at right
     with dissolve
 
-    "[Image Prompt: crypto mining rigs overheating on a beach, seagulls judging]"
+    "Image Prompt: crypto mining rigs overheating on a beach, seagulls judging"
     "Path B2 - Bad Ending: The DAO forgets about e-waste; the rigs melt sand into modern art. Critics call it avant-garde, regulators call it 'please stop'. The show is canceled after episode one."
     t "Art is subjective. Fines are not."
     y "I told you to buy surge protectors."
@@ -400,7 +400,7 @@ label ending_b3:
     show yahu at left
     with fade
 
-    "[Image Prompt: outdoor kitchen set, hummus spotlight, camera drones]"
+    "Image Prompt: outdoor kitchen set, hummus spotlight, camera drones"
     "Path B3 - Good Ending: Yahu reveals the hummus recipe; world leaders line up for cooking classes. Peace talks resume because everyone agrees to keep stirring instead of arguing."
     t "Food diplomacy! Tremendous!"
     y "Chickpeas over chess moves. Works every time."
@@ -414,7 +414,7 @@ label ending_b4:
     show yahu at center
     with dissolve
 
-    "[Image Prompt: audio mixer sparking, podcasters panicking, palm trees swaying]"
+    "Image Prompt: audio mixer sparking, podcasters panicking, palm trees swaying"
     "Path B4 - Absurd Ending: Epstein cross-wires the microphones with the island's security drones. Every sentence triggers laser light shows. The true-crime podcast becomes a rave; Spotify labels it 'unclassifiable'."
     t "The bass drop was a subpoena."
     y "My ears are now classified information."
@@ -428,7 +428,7 @@ label ending_b5:
     show yahu at right
     with fade
 
-    "[Image Prompt: telethon stage on the beach, scrolling donations for fact-checkers]"
+    "Image Prompt: telethon stage on the beach, scrolling donations for fact-checkers"
     "Path B5 - Good Ending: The charity telethon funds independent fact-checkers worldwide. Ratings soar; conspiracy forums grudgingly tip. Journalism schools name scholarships after the parrots."
     t "We did good. Tremendously good."
     y "Facts with fireworks—who knew?"
@@ -442,7 +442,7 @@ label ending_b6:
     show yahu at left
     with dissolve
 
-    "[Image Prompt: mysterious streaming van, glowing contract, stormy sky]"
+    "Image Prompt: mysterious streaming van, glowing contract, stormy sky"
     "Path B6 - Twist Ending: The mysterious streaming service is actually run by time-traveling interns. They recut footage into a cautionary documentary screened in 2042 civics classes. The trio become memeable lesson plans."
     t "I always wanted to trend in the future."
     y "Do I get royalties in time credits?"
@@ -460,7 +460,7 @@ label ending_c1:
     show epstein at right
     with fade
 
-    "[Image Prompt: laptops showing treaty drafts, bowls of hummus, rooftop peace party]"
+    "Image Prompt: laptops showing treaty drafts, bowls of hummus, rooftop peace party"
     "Path C1 - Good Ending: The AI mediator, trained on hummus reviews, learns nuance. It drafts a treaty full of flavor metaphors; everyone signs, hungry and happy."
     t "We solved peace with chickpeas. Beautiful."
     y "Appetizers, not adversaries."
@@ -474,7 +474,7 @@ label ending_c2:
     show epstein at left
     with dissolve
 
-    "[Image Prompt: glitchy AI screen spouting conspiracy threads, diplomats facepalming]"
+    "Image Prompt: glitchy AI screen spouting conspiracy threads, diplomats facepalming"
     "Path C2 - Bad Ending: The AI mediates by citing conspiracy threads. Talks derail into flat-earth jokes. A cat from the livestream becomes Secretary of Common Sense."
     t "We got upstaged by a cat."
     y "At least the cat vetoed the nonsense."
@@ -488,7 +488,7 @@ label ending_c3:
     show epstein at center
     with fade
 
-    "[Image Prompt: seaside desalination rig, kids coding, Wi‑Fi balloons overhead]"
+    "Image Prompt: seaside desalination rig, kids coding, Wi‑Fi balloons overhead"
     "Path C3 - Good Ending: Students lead the project; water flows, Wi‑Fi streams, and startups launch scholarships. The trio quietly fund maintenance instead of naming rights. Growth with humility—who knew."
     t "No gold letters, just working taps. Feels... good?"
     y "This might be my favorite outcome."
@@ -502,7 +502,7 @@ label ending_c4:
     show epstein at right
     with dissolve
 
-    "[Image Prompt: procurement forms taller than people, cables tangled, alarm lights]"
+    "Image Prompt: procurement forms taller than people, cables tangled, alarm lights"
     "Path C4 - Bad Ending: Epstein's 'network' ships counterfeit routers. The pilot crashes; the hackathon spends 12 hours on hold with tech support. The trio are sentenced to mandatory workshops on vendor vetting."
     t "I hate hold music."
     y "This is why we read invoices."
@@ -516,7 +516,7 @@ label ending_c5:
     show epstein at center
     with fade
 
-    "[Image Prompt: comedians on stage, diplomats laughing, treaty projected in lights]"
+    "Image Prompt: comedians on stage, diplomats laughing, treaty projected in lights"
     "Path C5 - Absurd Ending: Comedians roast everyone equally; the room bonds over punchlines. They write a treaty with footnotes of jokes. Historians will hate it, citizens adore it."
     t "Comedy diplomacy! Tremendous!"
     y "Humor is now a binding clause."
@@ -530,7 +530,7 @@ label ending_c6:
     show epstein at right
     with dissolve
 
-    "[Image Prompt: Twitch chat scrolling at light speed, diplomats unplugging cables]"
+    "Image Prompt: Twitch chat scrolling at light speed, diplomats unplugging cables"
     "Path C6 - Twist Ending: Diplomats rage-quit; Twitch chat writes the treaty using emotes and ASCII art. It inexplicably works. Courts scramble to interpret ':peace:' as a legal term."
     t "The people have spoken—via emotes."
     y "I never thought I'd ratify a smiley."
@@ -548,7 +548,7 @@ label ending_d1:
     show yahu at right
     with fade
 
-    "[Image Prompt: divers giving thumbs up, server racks glowing green, checklists completed]"
+    "Image Prompt: divers giving thumbs up, server racks glowing green, checklists completed"
     "Path D1 - Good Ending: Documentation saves the day. The internet stabilizes, sysadmins applaud, and the trio receive honorary stickers that say 'I read the manual'."
     t "I love manuals now. Shocking, I know."
     y "Process matters. Who knew."
@@ -562,7 +562,7 @@ label ending_d2:
     show yahu at right
     with dissolve
 
-    "[Image Prompt: underwater cable sparks, angry octopus with warning sign]"
+    "Image Prompt: underwater cable sparks, angry octopus with warning sign"
     "Path D2 - Bad Ending: Skipping the changelog triggers a firmware loop. The octopus union files a grievance. The trio must publicly apologize on C-SPAN's marine life segment."
     t "We got ratioed by cephalopods."
     y "They had good points."
@@ -576,7 +576,7 @@ label ending_d3:
     show yahu at left
     with fade
 
-    "[Image Prompt: waterproof library shelves, glowing books, cats in diving helmets]"
+    "Image Prompt: waterproof library shelves, glowing books, cats in diving helmets"
     "Path D3 - Absurd Ending: The underwater library draws scholars and cat divers. Knowledge flows; conspiracy theories drown. The trio hosts quiet reading hours streamed worldwide."
     t "Silence is kind of nice."
     y "This might be the most peaceful we've been."
@@ -590,7 +590,7 @@ label ending_d4:
     show yahu at left
     with dissolve
 
-    "[Image Prompt: motivational NFT posters underwater, confused fish, blinking error lights]"
+    "Image Prompt: motivational NFT posters underwater, confused fish, blinking error lights"
     "Path D4 - Bad Ending: Motivational NFTs replace every archive. Fish are inspired but humanity loses critical documents. The trio is assigned to hand-write backups on waterproof napkins."
     t "'Swim fast, fail fast' was not the vibe we needed."
     y "My hand hurts from writing."
@@ -604,7 +604,7 @@ label ending_d5:
     show yahu at center
     with fade
 
-    "[Image Prompt: benevolent AI kraken distributing bug bounty coins, cables tidy]"
+    "Image Prompt: benevolent AI kraken distributing bug bounty coins, cables tidy"
     "Path D5 - Good Ending: The AI kraken rewards bug reports with seafood vouchers. Security skyrockets, outages plummet, and the kraken hosts a webinar on ethical tentacle use."
     t "Best webinar I've ever attended."
     y "I took notes. Many notes."
@@ -618,7 +618,7 @@ label ending_d6:
     show yahu at left
     with dissolve
 
-    "[Image Prompt: cables tangled like noodles, alarms blaring, kraken shrugging]"
+    "Image Prompt: cables tangled like noodles, alarms blaring, kraken shrugging"
     "Path D6 - Bad Ending: Without rate limits, the AI kraken DDoSes itself. The internet hiccups; everyone blames a solar flare. The trio is sentenced to cable management community service."
     t "We should have labeled the cables."
     y "I brought zip ties for next time."
@@ -636,7 +636,7 @@ label ending_e1:
     show yahu at left
     with fade
 
-    "[Image Prompt: VR avatars with floating fact-check labels, colorful chat bubbles]"
+    "Image Prompt: VR avatars with floating fact-check labels, colorful chat bubbles"
     "Path E1 - Good Ending: Fact-check bubbles keep everyone honest; approval ratings rise. Grandma on dial-up becomes a breakout star and the de facto conscience of the stream."
     t "Grandma 2026! Tremendous!"
     y "I trust her more than half of parliament."
@@ -650,7 +650,7 @@ label ending_e2:
     show yahu at right
     with dissolve
 
-    "[Image Prompt: empty VR auditorium, single dial-up user waving, buffering icon]"
+    "Image Prompt: empty VR auditorium, single dial-up user waving, buffering icon"
     "Path E2 - Bad Ending: Shadow-ban mishap empties the room. Only the grandma remains, lecturing on netiquette. Donations plummet; the trio is forced to watch her PowerPoint."
     t "This is... humbling."
     y "Her clip art is powerful."
@@ -664,7 +664,7 @@ label ending_e3:
     show yahu at left
     with fade
 
-    "[Image Prompt: virtual escape room puzzle walls, transparent dashboards unlocking]"
+    "Image Prompt: virtual escape room puzzle walls, transparent dashboards unlocking"
     "Path E3 - Good Ending: Players solve ethics puzzles, unlocking live transparency dashboards for the government. Trust spikes; trolls sulk; civics teachers rejoice."
     t "Gamified democracy! I love it."
     y "Metrics look good, morality looks better."
@@ -678,7 +678,7 @@ label ending_e4:
     show yahu at right
     with dissolve
 
-    "[Image Prompt: glitching VR walls, exit door marked 'skip ethics', alarms]"
+    "Image Prompt: glitching VR walls, exit door marked 'skip ethics', alarms"
     "Path E4 - Absurd Ending: Someone finds the skip tutorial exploit. Chaos ensues; avatars clip through walls into C-SPAN. The trio must patch ethics with a day-one update."
     "The HUD politely asks you, the player, to accept terms that change every two seconds. You click 'maybe' and the universe lags."
     t "Day-one patch for morals. Sounds right."
@@ -693,7 +693,7 @@ label ending_e5:
     show yahu at right
     with fade
 
-    "[Image Prompt: hologram indie band on White House lawn, donation bars filling]"
+    "Image Prompt: hologram indie band on White House lawn, donation bars filling"
     "Path E5 - Good Ending: Indie artists perform, funds flow to digital literacy programs. The concert becomes the feel-good clip of the year. Even the moderator bot smiles (algorithmically)."
     t "Greatest concert on a lawn. Period."
     y "Education with rhythm—approved."
@@ -707,7 +707,7 @@ label ending_e6:
     show yahu at left
     with dissolve
 
-    "[Image Prompt: deepfake celebrities glitching on stage, audience bewildered, servers smoking]"
+    "Image Prompt: deepfake celebrities glitching on stage, audience bewildered, servers smoking"
     "Path E6 - Twist Ending: Deepfake guests spiral into a feedback loop, arguing with their real counterparts in chat. Servers overheat; the stream trends as 'Accidental Existentialism'."
     t "We trended! Not sure why."
     y "Philosophy majors loved it."
