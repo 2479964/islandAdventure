@@ -29,7 +29,7 @@ This document adds lightweight, browser-friendly minigames at natural tension/de
 <div id="memory-grid"></div>
 <div id="timer"></div>
 <script>
-const contacts = ['deal','ally','press','law'];           // base cards (duplicated below for pairs)
+const contacts = ['deal','ally','press','law'];           // base cards (duplicated on next line via spread operator)
 const deck = shuffle([...contacts, ...contacts]);
 let flipped = [], solved = 0, time = 45, timerInterval = null, lock = false, finished = false;
 function shuffle(arr){
@@ -45,13 +45,22 @@ deck.forEach((c,i) => {
   card.textContent = '?'; card.dataset.value = c;
   card.onclick = () => {
     if (lock || flipped.length === 2 || card.disabled || finished) return;
-    card.textContent = c; card.disabled = true; flipped.push(card);
+    card.textContent = c;
+    card.disabled = true;
+    flipped.push(card);
     if (flipped.length === 2) {
       const [a,b] = flipped;
       if (a.dataset.value === b.dataset.value) { solved += 2; flipped=[]; }
       else {
         lock = true;
-        setTimeout(() => { a.textContent='?'; b.textContent='?'; a.disabled=b.disabled=false; flipped=[]; lock = false; }, 600);
+        setTimeout(() => {
+          a.textContent='?';
+          b.textContent='?';
+          a.disabled=false;
+          b.disabled=false;
+          flipped=[];
+          lock = false;
+        }, 600);
       }
       if (solved === deck.length) end(true);
     }
@@ -59,7 +68,11 @@ deck.forEach((c,i) => {
   grid.appendChild(card);
 });
 const timer = document.getElementById('timer');
-timerInterval = setInterval(()=>{ time--; timer.textContent=`Time: ${time}s`; if(time<=0) end(false); },1000);
+timerInterval = setInterval(()=>{
+  time--;
+  timer.textContent=`Time: ${time}s`;
+  if(time<=0) end(false);
+},1000);
 function end(win){
   if (finished) return;
   finished = true;
@@ -121,31 +134,40 @@ flash();
 
 **Implementation (simplified):**
 ```html
-<div id="feathers"></div><button id="submit">Submit</button>
+<div id="feathers"></div><div id="attempt"></div><button id="submit">Submit</button>
 <div id="feedback"></div>
 <script>
 const answer=['red','blue','green','gold'];
 const feathers=document.getElementById('feathers');
 const feedback=document.getElementById('feedback');
+const attemptDisplay=document.getElementById('attempt');
 ['red','blue','green','gold'].forEach(color=>{
   const btn=document.createElement('button');
   btn.textContent=color; btn.onclick=()=>select(color); feathers.appendChild(btn);
 });
 let attempt=[];
 let attemptsLeft=3;
-function select(c){ if(attempt.length<4){ attempt.push(c); } }
+function renderAttempt(){ attemptDisplay.textContent = attempt.length ? attempt.join(' → ') : 'No picks yet'; }
+function select(c){
+  if(attempt.length>=4 || attempt.includes(c)) return;
+  attempt.push(c);
+  renderAttempt();
+}
+renderAttempt();
 document.getElementById('submit').onclick=()=>{
   const guess = attempt.join(',');
   const target = answer.join(',');
   if(guess===target){ end(true); return; }
   attemptsLeft--;
   attempt=[];
-  feedback.textContent=`Nope. ${attemptsLeft} tries left.`;
+  feedback.textContent=`Nope. You tried: ${guess || 'nothing'}. ${attemptsLeft} tries left.`;
+  renderAttempt();
   if(!attemptsLeft) end(false);
 };
 function end(win){
   feedback.textContent=win?'Code cracked!':'Parrot wins.';
   attempt=[];
+  renderAttempt();
 }
 </script>
 ```
