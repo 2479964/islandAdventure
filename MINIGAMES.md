@@ -29,7 +29,7 @@ This document adds lightweight, browser-friendly minigames at natural tension/de
 <div id="memory-grid"></div>
 <div id="timer"></div>
 <script>
-const contacts = ['deal','ally','press','law'];           // duplicates for pairs
+const contacts = ['deal','ally','press','law'];           // base cards (duplicated below for pairs)
 const deck = [...contacts, ...contacts].sort(() => Math.random()-0.5);
 let flipped = [], solved = 0, time = 45, tick;
 const grid = document.getElementById('memory-grid');
@@ -116,13 +116,12 @@ const feedback=document.getElementById('feedback');
   const btn=document.createElement('button');
   btn.textContent=color; btn.onclick=()=>select(color); feathers.appendChild(btn);
 });
-let attempt=[];
+let attempt=[], attemptsLeft=3;
 function select(c){ if(attempt.length<4){ attempt.push(c); } }
 document.getElementById('submit').onclick=()=>{
   if(attempt.join(',')===answer.join(',')) end(true);
   else { attemptsLeft--; attempt=[]; feedback.textContent=`Nope. ${attemptsLeft} tries left.`; if(!attemptsLeft) end(false); }
 };
-let attemptsLeft=3;
 function end(win){ feedback.textContent=win?'Code cracked!':'Parrot wins.'; }
 </script>
 ```
@@ -148,7 +147,7 @@ function end(win){ feedback.textContent=win?'Code cracked!':'Parrot wins.'; }
 <div id="dialogue"></div>
 <script>
 const dialogue=document.getElementById('dialogue');
-const prompts=[
+const prompts=[ // example structure; add two more prompts to make three turns total
  {q:'Pick a toast line', opts:[
    {t:'To mutual profit!', v:1},
    {t:'To mystery flights!', v:0},
