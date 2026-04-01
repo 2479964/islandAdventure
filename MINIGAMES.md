@@ -49,7 +49,7 @@ deck.forEach((c,i) => {
   grid.appendChild(card);
 });
 const timer = document.getElementById('timer');
-tick = setInterval(()=>{ time--; timer.textContent=`:${time}`; if(time<=0) end(false); },1000);
+tick = setInterval(()=>{ time--; timer.textContent=`Time: ${time}s`; if(time<=0) end(false); },1000);
 function end(win){ clearInterval(tick); alert(win?'Win!':'Lose.'); }
 </script>
 ```
@@ -111,6 +111,7 @@ flash();
 <script>
 const answer=['red','blue','green','gold'];
 const feathers=document.getElementById('feathers');
+const feedback=document.getElementById('feedback');
 ['red','blue','green','gold'].forEach(color=>{
   const btn=document.createElement('button');
   btn.textContent=color; btn.onclick=()=>select(color); feathers.appendChild(btn);
@@ -146,6 +147,7 @@ function end(win){ feedback.textContent=win?'Code cracked!':'Parrot wins.'; }
 ```html
 <div id="dialogue"></div>
 <script>
+const dialogue=document.getElementById('dialogue');
 const prompts=[
  {q:'Pick a toast line', opts:[
    {t:'To mutual profit!', v:1},
